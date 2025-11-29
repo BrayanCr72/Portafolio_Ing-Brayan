@@ -1,0 +1,127 @@
+---
+import { technologies } from '../data/technologiesData';
+
+
+interface Props {
+  lang?: 'es' | 'en';
+}
+
+const { lang = 'en' } = Astro.props;
+
+
+---
+
+<section 
+  id="technologies" 
+  data-gsap="tech-main-container"
+  class="min-h-screen bg-slate-900 text-white py-20 relative overflow-hidden"
+>
+  <!-- Background accents -->
+  <div class="absolute top-1/4 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section Title -->
+    <div 
+      id="tech-header" 
+      data-gsap="tech-header"
+      class="text-center mb-20"
+    >
+      <h2 
+        id="tech-title" 
+        data-gsap="tech-title-text"
+        class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+      >
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+          {lang === 'es' ? 'Tecnologías' : 'Technologies'}
+        </span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
+      <p class="text-gray-400 mt-6 text-lg">
+        {lang === 'es' 
+          ? 'Herramientas y tecnologías con las que trabajo' 
+          : 'Tools and technologies I work with'
+        }
+      </p>
+    </div>
+
+    <!-- Technologies Grid -->
+    <div class="max-w-7xl mx-auto space-y-16">
+      {Object.entries(technologies).map(([key, category], categoryIndex) => (
+        <div 
+          id={`tech-category-${key}`}
+          data-gsap={`tech-category-${key}`}
+          class="group"
+        >
+          <!-- Category Title -->
+          <h3 
+            id={`tech-category-title-${key}`}
+            data-gsap={`tech-title-${key}`}
+            class="text-2xl md:text-3xl font-semibold mb-8 text-gray-200 flex items-center gap-3"
+          >
+            <span class="w-8 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
+            {category.title[lang]}
+          </h3>
+
+          <!-- Technologies Grid -->
+          <div 
+            id={`tech-grid-${key}`}
+            data-gsap={`tech-grid-${key}`}
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6"
+          >
+            {category.items.map((tech, techIndex) => (
+              <div 
+                id={`tech-item-${key}-${techIndex}`}
+                data-gsap={`tech-item-${key}-${techIndex}`}
+                class="tech-card bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col items-center justify-center gap-4 group/card"
+              >
+                <!-- Tech Icon -->
+                <div class="w-16 h-16 flex items-center justify-center">
+                  <img 
+                    src={tech.icon} 
+                    alt={tech.name}
+                    class="w-full h-full object-contain filter brightness-90 group-hover/card:brightness-110 transition-all duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                
+                <!-- Tech Name (appears on hover) -->
+                <span class="text-sm text-gray-400 text-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 font-medium">
+                  {tech.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .tech-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(219, 39, 119, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .tech-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Stagger animation delay for grid items */
+  .tech-card:nth-child(1) { animation-delay: 0.05s; }
+  .tech-card:nth-child(2) { animation-delay: 0.1s; }
+  .tech-card:nth-child(3) { animation-delay: 0.15s; }
+  .tech-card:nth-child(4) { animation-delay: 0.2s; }
+  .tech-card:nth-child(5) { animation-delay: 0.25s; }
+  .tech-card:nth-child(6) { animation-delay: 0.3s; }
+</style>

@@ -1,0 +1,19 @@
+---
+import Layout from '../components/Layout/Layout.astro';
+import AboutMe from '../components/aboutMe.astro';
+import Hero from '../components/hero.astro';
+import Technologies from '../components/Technologies.astro';
+import { getLanguageFromUrl } from '../utils/language';
+import '../styles/global.css';
+
+
+const lang = "en" || getLanguageFromUrl(Astro.url);
+---
+
+<Layout title="Ing Brayan O - Portafolio">
+  <Hero lang={lang} />
+  <AboutMe lang={lang} />
+  <Technologies lang={lang} />
+
+</Layout>
+
