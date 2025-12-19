@@ -3,7 +3,9 @@ import Layout from '../components/Layout/Layout.astro';
 import AboutMe from '../components/aboutMe.astro';
 import Hero from '../components/hero.astro';
 import Technologies from '../components/Technologies.astro';
+import Experience from '../components/experience.astro';
 import { getLanguageFromUrl } from '../utils/language';
+import Contact from '../components/contact.astro';
 import '../styles/global.css';
 
 
@@ -14,6 +16,7 @@ const lang = "en" || getLanguageFromUrl(Astro.url);
   <Hero lang={lang} />
   <AboutMe lang={lang} />
   <Technologies lang={lang} />
-
+  <Experience lang={lang} />
+  <Contact lang={lang} />
 </Layout>
 
