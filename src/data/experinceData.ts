@@ -1,8 +1,37 @@
+
+
+interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  role: string;
+  challenge: string;
+  impact: string;
+  Url?: string; // opcional con ?
+}
+
+interface Company {
+  title: string;
+  projects: Project[];
+}
+
+interface ExperienceData {
+  title: string;
+  srs: Company;
+  fundes: Company;
+  universidad: Company;
+  freelance: Company;
+}
+
+interface Experience {
+  es: ExperienceData;
+  en: ExperienceData;
+}
 export const experience = {
   es: {
     title: "Experiencia Profesional",
     srs: {
-      title: "SRS (Soluciones Regulatorias)",
+      title: "SRS (Servicio de Registros Sanitarios)",
       projects: [
         {
           name: "RegControl",
@@ -21,7 +50,8 @@ export const experience = {
           challenge:
             "Fue mi primer experiencia laboral y el mayor reto fue implementar servicios en la nube con AWS. Integrar S3 y Lambda para el manejo de documentación fue un aprendizaje clave.",
           impact:
-            "El sistema mejoró el orden, trazabilidad y gestión interna de registros, generando un impacto significativo dentro de la empresa."
+            "El sistema mejoró el orden, trazabilidad y gestión interna de registros, generando un impacto significativo dentro de la empresa.",
+          Url: ""
         },
         {
           name: "Sitio Web Informativo + Asistente IA",
@@ -40,7 +70,8 @@ export const experience = {
           challenge:
             "El reto principal fue crear e integrar el asistente virtual con IA, lo cual marcó mi primera incursión en inteligencia artificial.",
           impact:
-            "El sitio fortaleció la presencia digital de SRS y permitió a los usuarios aclarar dudas de forma rápida mediante el chatbot."
+            "El sitio fortaleció la presencia digital de SRS y permitió a los usuarios aclarar dudas de forma rápida mediante el chatbot.",
+          Url: "https://www.srsregistros.com/"
         }
       ]
     },
@@ -58,7 +89,8 @@ export const experience = {
           challenge:
             "Fue un trabajo de corta duración y técnicamente sencillo, sin retos significativos.",
           impact:
-            "Contribuí al avance del frontend y a la mejora del flujo interno del sistema."
+            "Contribuí al avance del frontend y a la mejora del flujo interno del sistema.",
+          Url: ""
         }
       ]
     },
@@ -76,7 +108,8 @@ export const experience = {
           challenge:
             "El mayor reto fue manejar grandes volúmenes de datos y detectar inconsistencias entre registros antiguos y nuevos.",
           impact:
-            "El sistema mejoró los controles internos y redujo errores en la gestión de activos."
+            "El sistema mejoró los controles internos y redujo errores en la gestión de activos.",
+          Url: ""
         },
         {
           name: "FitPass",
@@ -95,7 +128,8 @@ export const experience = {
           challenge:
             "Integrar IA para crear rutinas personalizadas, geolocalización por mapa y manejo de múltiples roles dentro de una misma plataforma.",
           impact:
-            "FitPass ofreció una automatización avanzada para gyms, potenciando decisiones con IA y mejorando la experiencia de usuarios y administradores."
+            "FitPass ofreció una automatización avanzada para gyms, potenciando decisiones con IA y mejorando la experiencia de usuarios y administradores.",
+          Url: ""
         },
         {
           name: "Tico Travel (App Móvil)",
@@ -112,7 +146,8 @@ export const experience = {
           challenge:
             "Integrar tecnologías móviles y backend robusto con flujos de reserva.",
           impact:
-            "La app permitió centralizar destinos, usuarios y reservaciones en un entorno móvil moderno."
+            "La app permitió centralizar destinos, usuarios y reservaciones en un entorno móvil moderno.",
+          Url: ""
         }
       ]
     },
@@ -130,7 +165,8 @@ export const experience = {
           challenge:
             "Integración de pasarela de pagos internacional y manejo dinámico de itinerarios.",
           impact:
-            "Una herramienta funcional que permite a los usuarios planear viajes de forma intuitiva y segura."
+            "Una herramienta funcional que permite a los usuarios planear viajes de forma intuitiva y segura.",
+          Url: "https://www.buildatripcr.com/"
         },
         {
           name: "HealthPort",
@@ -142,7 +178,8 @@ export const experience = {
           challenge:
             "Implementar trazabilidad completa de paquetes y roles específicos para delivery, admins y superadmin.",
           impact:
-            "Un sistema confiable que optimiza compras internacionales y garantiza la seguridad en entregas."
+            "Un sistema confiable que optimiza compras internacionales y garantiza la seguridad en entregas.",
+          Url: ""
         }
       ]
     }
@@ -174,7 +211,9 @@ export const experience = {
           challenge:
             "It was my first job experience, and integrating AWS services —especially S3 and Lambda— was the biggest challenge and learning opportunity.",
           impact:
-            "The system greatly improved internal organization, traceability, and record management within SRS."
+            "The system greatly improved internal organization, traceability, and record management within SRS.",
+          Url: ""
+
         },
         {
           name: "Company Website + AI Assistant",
@@ -193,7 +232,8 @@ export const experience = {
           challenge:
             "Building the AI chatbot was the most challenging part and marked my first experience working with artificial intelligence.",
           impact:
-            "The website strengthened SRS's digital presence and improved user support through the chatbot."
+            "The website strengthened SRS's digital presence and improved user support through the chatbot.",
+          Url: "https://www.srsregistros.com/"
         }
       ]
     },
@@ -211,7 +251,8 @@ export const experience = {
           challenge:
             "A short and technically simple project without major challenges.",
           impact:
-            "Helped move the platform forward and improve UI functionality."
+            "Helped move the platform forward and improve UI functionality.",
+          Url: ""
         }
       ]
     },
@@ -229,7 +270,8 @@ export const experience = {
           challenge:
             "Handling large data volumes and identifying mismatch patterns between new and existing records.",
           impact:
-            "Improved accuracy and control over the university’s asset inventory."
+            "Improved accuracy and control over the university’s asset inventory.",
+          Url: ""
         },
         {
           name: "FitPass",
@@ -248,7 +290,8 @@ export const experience = {
           challenge:
             "Integrating AI for personalized routines, implementing geolocation, and coordinating multiple user roles.",
           impact:
-            "FitPass offered automation, intelligent training plans, and administrative efficiency for gyms."
+            "FitPass offered automation, intelligent training plans, and administrative efficiency for gyms.",
+          Url: ""
         },
         {
           name: "Tico Travel (Mobile App)",
@@ -265,7 +308,8 @@ export const experience = {
           challenge:
             "Combining mobile frameworks with robust backend flows for reservations.",
           impact:
-            "The app centralized tourism listings and reservations on a modern mobile platform."
+            "The app centralized tourism listings and reservations on a modern mobile platform.",
+          Url: ""
         }
       ]
     },
@@ -282,7 +326,8 @@ export const experience = {
           challenge:
             "Integrating an international payment gateway and managing dynamic travel itineraries.",
           impact:
-            "Enabled users to easily create and pay for customized itineraries in Costa Rica."
+            "Enabled users to easily create and pay for customized itineraries in Costa Rica.",
+          Url: "https://www.buildatripcr.com/"
         },
         {
           name: "HealthPort",
@@ -294,7 +339,8 @@ export const experience = {
           challenge:
             "Implementing full traceability of packages and secure code-based delivery validation.",
           impact:
-            "A reliable platform that optimizes medical-sector imports and ensures secure package delivery."
+            "A reliable platform that optimizes medical-sector imports and ensures secure package delivery.",
+          Url: ""
         }
       ]
     }

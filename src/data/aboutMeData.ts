@@ -9,7 +9,7 @@ export const aboutMeData = {
       },
       experience: {
         title: "Experiencia que me marcó",
-        content: "Una de las experiencias más significativas ocurrió en mi penúltimo semestre, cuando tuve la oportunidad de realizar una pasantía en una empresa donde desarrollamos un sistema de gestión y control de registros, utilizando servicios de AWS. Fue un gran reto: había tecnologías que no conocía, pero investigar, aprender y superar cada obstáculo fue una etapa que me hizo crecer enormemente.",
+        content: "Una de las experiencias más destacadas / que cambió mi vida ocurrió durante mi penúltimo semestre, cuando tuve la oportunidad de realizar una pasantía en una empresa donde desarrollamos un sistema de gestión y control de registros utilizando servicios de AWS. Fue un desafío: trabajé con tecnologías que aún no conocía, pero investigar, aprender y superar los obstáculos me ayudó a crecer enormemente.",
         additional: "Más adelante, en esa misma empresa, desarrollé un asistente con inteligencia artificial para la página web, lo que fortaleció aún más mi interés por la AI y su impacto en el desarrollo moderno."
       },
       workStyle: {
@@ -28,15 +28,15 @@ export const aboutMeData = {
   },
   en: {
     title: "About Me",
-    intro: "Hi, I'm Brayan Ordoñez, a developer passionate about technology, logic, and innovation. I graduated in 2025 from the National University of Costa Rica, where I discovered what truly drives me: creating solutions that blend functionality, creativity, and a human touch.",
+    intro: "Hi, I'm Brayan Ordoñez, a passionate developer about technology, logic, and innovation. I graduated in 2025 from the National University of Costa Rica, where I discovered what truly drives me: creating solutions that blend functionality, creativity, and a human touch.",
     sections: {
       journey: {
         title: "My journey in technology",
-        content: "From my first programming and operating systems courses, I knew this was the right path for me. Programming logic sparked my curiosity, but it wasn't until I started building graphical interfaces —bringing projects to life— that I truly fell in love with software development."
+        content: "Since I first took programming courses, programming and operating systems course i knew this was the right path for me. The logic sparked my curiosity, but it wasn't until I started building graphical interfaces —bringing projects to life— that I truly fell in love with software development."
       },
       experience: {
         title: "A defining experience",
-        content: "One of the most impactful experiences happened during my second-to-last semester, when I had the opportunity to complete an internship at a company where we developed a record management and control system using AWS services. It was challenging: I faced technologies I didn't yet know, but researching, learning, and overcoming obstacles helped me grow tremendously.",
+        content: "One of the most remarkable life changing experiences happened during my second-to-last semester, when I had the opportunity to complete an internship at a company where we developed a record management and control system using AWS services. It was challenging: I dealed with technologies I didn't yet know, but researching, learning, and overcoming obstacles helped me grow tremendously.",
         additional: "Later on, at the same company, I developed an AI assistant for the website, which strengthened my passion for artificial intelligence and its role in modern development."
       },
       workStyle: {

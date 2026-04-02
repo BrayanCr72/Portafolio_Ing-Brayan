@@ -4,19 +4,59 @@ import AboutMe from '../components/aboutMe.astro';
 import Hero from '../components/hero.astro';
 import Technologies from '../components/Technologies.astro';
 import Experience from '../components/experience.astro';
-import { getLanguageFromUrl } from '../utils/language';
 import Contact from '../components/contact.astro';
 import '../styles/global.css';
-
-
-const lang = "en" || getLanguageFromUrl(Astro.url);
 ---
 
 <Layout title="Ing Brayan O - Portafolio">
-  <Hero lang={lang} />
-  <AboutMe lang={lang} />
-  <Technologies lang={lang} />
-  <Experience lang={lang} />
-  <Contact lang={lang} />
+  <div id="content-es" class="lang-content">
+    <Hero lang="es" />
+    <AboutMe lang="es" />
+    <Technologies lang="es" />
+    <Experience lang="es" />
+    <Contact lang="es" />
+  </div>
+  <div id="content-en" class="lang-content">
+    <Hero lang="en" />
+    <AboutMe lang="en" />
+    <Technologies lang="en" />
+    <Experience lang="en" />
+    <Contact lang="en" />
+  </div>
 </Layout>
 
+<style>
+  .lang-content { display: none; }
+</style>
+
+<script>
+  function getLang(): string {
+    const params = new URLSearchParams(window.location.search);
+    const urlLang = params.get('lang');
+    if (urlLang === 'es' || urlLang === 'en') {
+      localStorage.setItem('lang', urlLang);
+      return urlLang;
+    }
+    return localStorage.getItem('lang') || 'en';
+  }
+
+  function applyLang() {
+    const lang = getLang();
+    const es = document.getElementById('content-es');
+    const en = document.getElementById('content-en');
+    if (lang === 'es') {
+      es!.style.display = 'block';
+      en!.style.display = 'none';
+    } else {
+      en!.style.display = 'block';
+      es!.style.display = 'none';
+    }
+    // Actualizar el botón del navbar
+    const langBtn = document.getElementById('lang-button');
+    if (langBtn) {
+      langBtn.querySelector('span')!.textContent = lang.toUpperCase();
+    }
+  }
+
+  applyLang();
+</script>
