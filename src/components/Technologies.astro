@@ -5,7 +5,7 @@ import { technologies } from '../data/technologiesData';
 interface Props {
   lang?: 'es' | 'en';
 }
-
+const BUCKET_URL: string = import.meta.env.BUCKET_URL || '';
 const { lang = 'en' } = Astro.props;
 
 
@@ -78,9 +78,9 @@ const { lang = 'en' } = Astro.props;
                 <!-- Tech Icon -->
                 <div class="w-16 h-16 flex items-center justify-center">
                   <img 
-                    src={tech.icon} 
+                    src={ `${BUCKET_URL}${tech.icon}` } 
                     alt={tech.name}
-                    class="w-full h-full object-contain filter brightness-90 group-hover/card:brightness-110 transition-all duration-300"
+                    class="w-full h-full object-contain filter brightness-90 group-hover/card:brightness-110 transition-all duration-300 pointer-events-none"
                     loading="lazy"
                   />
                 </div>

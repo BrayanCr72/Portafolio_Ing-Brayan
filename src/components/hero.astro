@@ -1,6 +1,5 @@
 ---
 import { heroData } from "../data/heroData";
-import ingenieroImg from "../img/ingeniero.png";
 
 interface Props {
   lang?: "es" | "en";
@@ -8,6 +7,8 @@ interface Props {
 
 const { lang = "en" } = Astro.props;
 const data = heroData[lang];
+const Url: string = import.meta.env.BUCKET_URL || '';
+const ingenieroImg: string = "/Image/ingeniero.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSW1hZ2UvaW5nZW5pZXJvLnBuZyIsImlhdCI6MTc3NTQ1NjY3OCwiZXhwIjoyMDkwODE2Njc4fQ.B8i-CabMgex-LgokhWT1pY7AwMpByJbpI58aeD7Y4UY";
 ---
 
 <section
@@ -45,12 +46,13 @@ const data = heroData[lang];
         <div
           id="hero-image-container"
           data-gsap="hero-image"
-          class="w-64 h-64 md:w-80 md:h-80 flex-shrink-0 draw"
+          class="w-64 h-64 md:w-80 md:h-80 flex-shrink-0 draw pointer-events-none"
         >
           <img
-            src={ingenieroImg.src}
+            src={`${Url}${ingenieroImg}`}
             alt="Brayan Ordoñez"
             class="w-full h-full object-contain drop-shadow-2xl"
+            draggable="false"
           />
         </div>
 
@@ -124,21 +126,6 @@ const data = heroData[lang];
           }
         </p>
       </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div
-      id="hero-cta-section"
-      data-gsap="hero-cta-container"
-      class="text-center mt-16"
-    >
-      <button
-        id="hero-cta-button"
-        data-gsap="hero-cta-primary-button"
-        class="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-      >
-        {lang === "es" ? "Ver proyectos" : "View projects"}
-      </button>
     </div>
   </div>
 </section>

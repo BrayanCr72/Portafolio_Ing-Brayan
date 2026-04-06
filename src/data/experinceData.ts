@@ -192,7 +192,7 @@ export const experience = {
   en: {
     title: "Professional Experience",
     srs: {
-      title: "SRS (Regulatory Solutions)",
+      title: "SRS (Sanitary Records Service)",
       projects: [
         {
           name: "RegControl",

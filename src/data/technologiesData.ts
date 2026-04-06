@@ -2,57 +2,57 @@ export const technologies = {
   frontend: {
     title: { es: 'Frontend', en: 'Frontend' },
     items: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
-      { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-      { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-      { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-      { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { name: 'React', icon: 'Icons/react.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvcmVhY3Quc3ZnIiwiaWF0IjoxNzc1NDU0MzAzLCJleHAiOjIwOTA4MTQzMDN9.W04cync_Tn8nTyv9HMFTRX1HCWAgL1bTz0oS7SZSLnc' },
+      { name: 'Next.js', icon: 'Icons/nextjs.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvbmV4dGpzLnN2ZyIsImlhdCI6MTc3NTQ1NDM1MiwiZXhwIjoyMDkwODE0MzUyfQ.XL9DuD22wwC9FXEUkH_Npwecvh4ScQ9qa8PxE9fQyh4' },
+      { name: 'HTML5', icon: 'Icons/html5.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvaHRtbDUuc3ZnIiwiaWF0IjoxNzc1NDU0MjY5LCJleHAiOjIwOTA4MTQyNjl9.p9Zevz5s5Ej3QsY3vrw1kCP5aqn5tiQz6ng73Td1nVw' },
+      { name: 'CSS3', icon: 'Icons/html5.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvaHRtbDUuc3ZnIiwiaWF0IjoxNzc1NDU0MjQyLCJleHAiOjIwOTA4MTQyNDJ9.kWiW595hX0gjorng_xj7OMxyenZSY572z0xhJlVhxys' },
+      { name: 'Tailwind CSS', icon: 'Icons/tailwindcss-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvdGFpbHdpbmRjc3Mtb3JpZ2luYWwuc3ZnIiwiaWF0IjoxNzc1NDU0Mzg0LCJleHAiOjIwOTA4MTQzODR9.eZB1l1yk4RVX6EBNs0GlUrXPmAJJAYUspIOB35atN3c' },
+      { name: 'TypeScript', icon: 'Icons/typescript-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvdHlwZXNjcmlwdC1vcmlnaW5hbC5zdmciLCJpYXQiOjE3NzU0NTQ0MDcsImV4cCI6MjA5MDgxNDQwN30.dtGn5D03-8HYFvNKzwqrgPb7eKQRXL4hNU_krW-GFwg' },
+      { name: 'JavaScript', icon: 'Icons/javascript-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvamF2YXNjcmlwdC1vcmlnaW5hbC5zdmciLCJpYXQiOjE3NzU0NTQ0MzEsImV4cCI6MjA5MDgxNDQzMX0.no4jbm_TooHETVyfCBtKN1Otv0VjQA8wpSSr1bofgFw' },
     ]
   },
   backend: {
     title: { es: 'Backend', en: 'Backend' },
     items: [
-      { name: '.NET', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
-      { name: 'FastAPI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
-      { name: 'NestJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg' },
-      { name: 'Django', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
-      { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      { name: '.NET', icon: 'Icons/dotnetcore-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvZG90bmV0Y29yZS1vcmlnaW5hbC5zdmciLCJpYXQiOjE3NzU0NTQ4NjMsImV4cCI6MjA5MDgxNDg2M30.GI0XJpK7fwT_HTfCdSJbaPDoWq4iYC3YBhIQaao_t7k' },
+      { name: 'FastAPI', icon: 'Icons/fastapi-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvZmFzdGFwaS1vcmlnaW5hbC5zdmciLCJpYXQiOjE3NzU0NTQ4OTIsImV4cCI6MjA5MDgxNDg5Mn0.ENq1c6c5hsnAhQmlmsN2zVEeAEW56412HIlFp2coqqw' },
+      { name: 'NestJS', icon: 'Icons/nestjs-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvbmVzdGpzLW9yaWdpbmFsLnN2ZyIsImlhdCI6MTc3NTQ1NDkxNiwiZXhwIjoyMDkwODE0OTE2fQ.gVwZPPKx5rH4-eMYKlfGKpdcXQWQ0aL87sZ1MMxAOGI' },
+      { name: 'Django', icon: 'Icons/django-plain.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvZGphbmdvLXBsYWluLnN2ZyIsImlhdCI6MTc3NTQ1NDk0NSwiZXhwIjoyMDkwODE0OTQ1fQ.l15jwPGL69UDBzUrHq_tm185dFtXYb27SxzDBy6GGaI' },
+      { name: 'Python', icon: 'Icons/python-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvcHl0aG9uLW9yaWdpbmFsLnN2ZyIsImlhdCI6MTc3NTQ1NDk3NSwiZXhwIjoyMDkwODE0OTc1fQ.tWd9eCF02WN_BLs7XWe8PBUmGL9sRWNtS0hEP0MKiK0' },
     ]
   },
   database: {
     title: { es: 'Bases de Datos', en: 'Databases' },
     items: [
-      { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-      { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-      { name: 'SQLite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg' },
-      { name: 'Supabase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
+      { name: 'PostgreSQL', icon: 'Icons/postgresql-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvcG9zdGdyZXNxbC1vcmlnaW5hbC5zdmciLCJpYXQiOjE3NzU0NTUwNzgsImV4cCI6MjA5MDgxNTA3OH0.tK8tLsiDU6CQJhwQ8nZG0DwyNQODNdJfzMEDjslmBqw' },
+      { name: 'MySQL', icon: 'Icons/mysql-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvbXlzcWwtb3JpZ2luYWwuc3ZnIiwiaWF0IjoxNzc1NDU1MTAxLCJleHAiOjIwOTA4MTUxMDF9.Rl6sbKV-DglEwapSpDzvygWXDUBPdAjHD8t7XalaU1w' },
+      { name: 'SQLite', icon: 'Icons/sqlite-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvc3FsaXRlLW9yaWdpbmFsLnN2ZyIsImlhdCI6MTc3NTQ1NTEyNiwiZXhwIjoyMDkwODE1MTI2fQ.LHpQccsF7q0bMO8bVhCOVd8kdiKSYDUjFctKZUonV2w' },
+      { name: 'Supabase', icon: 'Icons/supabase-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvc3VwYWJhc2Utb3JpZ2luYWwuc3ZnIiwiaWF0IjoxNzc1NDU1MTQ4LCJleHAiOjIwOTA4MTUxNDh9.3Pq91lgHjy6inhja5rdEzhsQ7EtywcUx-pxiGeg1Kf4' },
     ]
   },
   mobile: {
     title: { es: 'Desarrollo Móvil', en: 'Mobile Development' },
     items: [
-      { name: 'React Native', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: '.NET MAUI', icon: 'https://www.hauer.codes/images/tech/netmaui.png' },
+      { name: 'React Native', icon: 'Icons/react.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvcmVhY3Quc3ZnIiwiaWF0IjoxNzc1NDU0MzAzLCJleHAiOjIwOTA4MTQzMDN9.W04cync_Tn8nTyv9HMFTRX1HCWAgL1bTz0oS7SZSLnc' },
+      { name: '.NET MAUI', icon: 'Icons/netmaui.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvbmV0bWF1aS5wbmciLCJpYXQiOjE3NzU0NTUyNjQsImV4cCI6MjA5MDgxNTI2NH0.VMhnVXLqK-CjHIbCiDay99CaZmFH_87xVwkBMrnQbxk' },
     ]
   },
   cloud: {
     title: { es: 'Cloud & DevOps', en: 'Cloud & DevOps' },
     items: [
-      { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
-      { name: 'Vercel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg' },
-      { name: 'Railway', icon: 'https://railway.app/brand/logo-light.svg' },
-      { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-      { name: 'GitLab', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg' },
+      { name: 'AWS', icon: 'Icons/amazonwebservices-plain-wordmark.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvYW1hem9ud2Vic2VydmljZXMtcGxhaW4td29yZG1hcmsuc3ZnIiwiaWF0IjoxNzc1NDU1NjMyLCJleHAiOjIwOTA4MTU2MzJ9.SB7SQSJPuvVHI5kCKYl4F-REJSPH1YiOsbYBWK2QAjM' },
+      { name: 'Vercel', icon: 'Icons/vercel-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvdmVyY2VsLW9yaWdpbmFsLnN2ZyIsImlhdCI6MTc3NTQ1NTY2MCwiZXhwIjoyMDkwODE1NjYwfQ.sFpTCYjGdaJ4kO87pgYt5vWp5lxRhLBqpCaJHwCAGE0' },
+      { name: 'Railway', icon: 'Icons/railway_logo-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvcmFpbHdheV9sb2dvLXJlbW92ZWJnLXByZXZpZXcucG5nIiwiaWF0IjoxNzc1NDU2MzE4LCJleHAiOjIwOTA4MTYzMTh9.vPUSBG61wWk-hQOpj1byb2Drkzsinbz0hb24-MzKLio' },
+      { name: 'GitHub', icon: 'Icons/github-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvZ2l0aHViLW9yaWdpbmFsLnN2ZyIsImlhdCI6MTc3NTQ1NTc2MiwiZXhwIjoyMDkwODE1NzYyfQ.yrrHxB6GCdO8vX-uH-_oQdC1P57THd_jVSWmt8V4h_8' },
+      { name: 'GitLab', icon: 'Icons/gitlab-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvZ2l0bGFiLW9yaWdpbmFsLnN2ZyIsImlhdCI6MTc3NTQ1NTc4NCwiZXhwIjoyMDkwODE1Nzg0fQ.CW8-7O2GyDPBVAkyd7xnGfwyqYpR4IsXQ5jmtSYGakc' },
     ]
   },
   tools: {
     title: { es: 'Herramientas', en: 'Tools' },
     items: [
-      { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-      { name: 'Jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg' },
-      { name: 'Taiga', icon: 'https://media-protected.taiga.io/project/5/1/2/3/bb20b87b7ebc55a2cb145c6d1af7adb7b1f1443739f0a2aaddfc24e37049/logo-colorpng300x300_q85_crop.png.300x300_q85_crop.png?token=aRaNrQ%3Aq5UfdbbCp96ylnpO0K96xo9ts9DAXpiNjSc8sGqmYWc2jzDi1nZskpmMPRdavs4lo15oBzHr4nc6HEcN77rhrA' },
+      { name: 'Figma', icon: 'Icons/figma-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvZmlnbWEtb3JpZ2luYWwuc3ZnIiwiaWF0IjoxNzc1NDU1OTcxLCJleHAiOjIwOTA4MTU5NzF9.pqqzQJCaZCQy8tT1oqwpC2k3fXFU9eZsq853rHzDTFQ' },
+      { name: 'Jira', icon: 'Icons/jira-original.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvamlyYS1vcmlnaW5hbC5zdmciLCJpYXQiOjE3NzU0NTU5NDcsImV4cCI6MjA5MDgxNTk0N30.Z8Z10jBgM4xbrsTgO0S8Rdbg9HsdY53ogLAOGpw2vh0' },
+      { name: 'Taiga', icon: 'Icons/Taiga-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xZGUzNTlkZi05MWEzLTQzMzMtOWVhZS00YjExZDE4YTZmYjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJbWcvSWNvbnMvVGFpZ2EtcmVtb3ZlYmctcHJldmlldy5wbmciLCJpYXQiOjE3NzU0NTYyMDQsImV4cCI6MjA5MDgxNjIwNH0.GGQSrIegI81TcB-0PWJj3zyPOZqwmZF7DrCqKxm1hdc' },
     ]
   }
 };

@@ -85,7 +85,7 @@ const colorClasses = {
                 <img 
                   src={company.icon} 
                   alt={company.data.title}
-                  class="w-full h-full object-contain p-2"
+                  class="w-full h-full object-contain p-2 pointer-events-none"
                 />
               ) : (
                 <span class="text-3xl">{company.icon}</span>
@@ -169,20 +169,6 @@ const colorClasses = {
           </div>
         </div>
       ))}
-    </div>
-
-    <!-- CTA -->
-    <div 
-      id="experience-cta" 
-      data-gsap="experience-cta"
-      class="text-center mt-16"
-    >
-      <a 
-        href="#contact"
-        class="inline-block bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-      >
-        {lang === 'es' ? '¿Trabajamos juntos?' : "Let's work together"}
-      </a>
     </div>
   </div>
 </section>
