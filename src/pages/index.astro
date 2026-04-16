@@ -9,6 +9,50 @@ import '../styles/global.css';
 ---
 
 <Layout title="Ing Brayan O - Portafolio">
+
+  <!-- Este script corre ANTES de pintar — evita el flash -->
+  <script is:inline>
+    if (sessionStorage.getItem('loaded')) {
+      document.documentElement.classList.add('hide-loading');
+    }
+  </script>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="fixed inset-0 z-[9999] bg-slate-950 flex items-center justify-center">
+    
+    <div class="w-full max-w-lg px-8">
+      <div class="bg-slate-900 rounded-xl border border-white/10 shadow-2xl overflow-hidden">
+        <div class="flex items-center gap-2 px-4 py-3 bg-slate-800 border-b border-white/10">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-2 text-xs text-gray-400 font-mono">portfolio.sh</span>
+        </div>
+        <div class="p-6 font-mono text-sm space-y-2 min-h-[200px]">
+          <div data-line="1" class="opacity-0 flex items-center gap-2">
+            <span class="text-green-400">❯</span>
+            <span class="text-gray-300" data-text="1"></span>
+          </div>
+          <div data-line="2" class="opacity-0 flex items-center gap-2">
+            <span class="text-green-400">❯</span>
+            <span class="text-gray-300" data-text="2"></span>
+          </div>
+          <div data-line="3" class="opacity-0 flex items-center gap-2">
+            <span class="text-green-400">❯</span>
+            <span class="text-gray-300" data-text="3"></span>
+          </div>
+          <div data-line="4" class="opacity-0 flex items-center gap-2">
+            <span class="text-green-400">❯</span>
+            <span class="text-purple-400 font-bold" data-text="4"></span>
+            <span class="inline-block w-2 h-4 bg-purple-400 ml-1 animate-pulse"></span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 h-1 bg-slate-800 rounded-full overflow-hidden">
+        <div data-progress class="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 rounded-full w-0"></div>
+      </div>
+    </div>
+  </div>
+
   <div id="content-es" class="lang-content">
     <Hero lang="es" />
     <AboutMe lang="es" />
@@ -23,13 +67,24 @@ import '../styles/global.css';
     <Experience lang="en" />
     <Contact lang="en" />
   </div>
+
 </Layout>
 
 <style>
   .lang-content { display: none; }
+
+   /* Oculta el loading antes de pintar si ya fue visto */
+  :global(html.hide-loading) #loading-screen {
+    display: none !important;
+  }
 </style>
 
 <script>
+  import { runLoadingSequence } from '../animations/loadingAnimation';
+  import { animateHero, setHeroInitialState } from '../animations/heroAnimation';
+  import { initHeroToAboutTransition, initAboutContentAnimations } from '../animations/transitionAnimation';
+
+  // ── Idioma ─────────────────────────────────────────────────
   function getLang(): string {
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
@@ -37,11 +92,10 @@ import '../styles/global.css';
       localStorage.setItem('lang', urlLang);
       return urlLang;
     }
-    return localStorage.getItem('lang') || 'en';
+    return localStorage.getItem('lang') || 'es';
   }
 
-  function applyLang() {
-    const lang = getLang();
+  function applyLang(lang: string) {
     const es = document.getElementById('content-es');
     const en = document.getElementById('content-en');
     if (lang === 'es') {
@@ -51,12 +105,41 @@ import '../styles/global.css';
       en!.style.display = 'block';
       es!.style.display = 'none';
     }
-    // Actualizar el botón del navbar
     const langBtn = document.getElementById('lang-button');
     if (langBtn) {
       langBtn.querySelector('span')!.textContent = lang.toUpperCase();
     }
   }
 
-  applyLang();
+  // ── Animaciones del hero ───────────────────────────────────
+  function startAnimations() {
+    setHeroInitialState();
+    animateHero();
+    setTimeout(() => {
+      initHeroToAboutTransition();
+      initAboutContentAnimations();
+    }, 500);
+  }
+
+  // ── Init ───────────────────────────────────────────────────
+  const lang = getLang();
+
+  // 1. Aplicar idioma antes de nada
+  applyLang(lang);
+
+  // 2. Esperar a que el navegador pinte el DOM
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if (sessionStorage.getItem('loaded')) {
+        // Ya pasó por el loading — ocultar y arrancar directo
+        const screen = document.getElementById('loading-screen');
+        if (screen) screen.style.display = 'none';
+        startAnimations();
+      } else {
+        // Primera visita — mostrar loading
+        sessionStorage.setItem('loaded', 'true');
+        runLoadingSequence(() => startAnimations());
+      }
+    });
+  });
 </script>

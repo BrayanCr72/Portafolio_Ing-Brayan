@@ -1,68 +1,12 @@
 ---
+import { content } from '../data/contactData';
+
 interface Props {
   lang?: 'es' | 'en';
 }
 
 const { lang = 'es' } = Astro.props;
 
-const content = {
-  es: {
-    title: 'Contacto',
-    subtitle: '¿Tienes un proyecto en mente?',
-    description: 'Me encantaría saber de ti. Ya sea que representes una empresa o seas un cliente independiente, estoy aquí para ayudarte a hacer realidad tus ideas.',
-    form: {
-      name: 'Nombre completo',
-      namePlaceholder: 'Juan Pérez',
-      email: 'Correo electrónico',
-      emailPlaceholder: 'tu@email.com',
-      type: 'Tipo de contacto',
-      typeCompany: 'Empresa',
-      typeFreelance: 'Freelance / Proyecto personal',
-      company: 'Nombre de la empresa',
-      companyPlaceholder: 'Nombre de tu empresa (opcional)',
-      message: 'Cuéntame sobre tu proyecto',
-      messagePlaceholder: 'Describe tu proyecto, necesidades o cualquier pregunta que tengas...',
-      submit: 'Enviar mensaje',
-      sending: 'Enviando...',
-      success: '¡Mensaje enviado! Me pondré en contacto pronto.',
-      error: 'Hubo un error. Por favor intenta de nuevo.'
-    },
-    contact: {
-      title: 'Otras formas de contacto',
-      email: 'Email',
-      phone: 'Teléfono',
-      location: 'Ubicación'
-    }
-  },
-  en: {
-    title: 'Contact',
-    subtitle: 'Have a project in mind?',
-    description: "I'd love to hear from you. Whether you represent a company or you're an independent client, I'm here to help bring your ideas to life.",
-    form: {
-      name: 'Full name',
-      namePlaceholder: 'John Doe',
-      email: 'Email address',
-      emailPlaceholder: 'your@email.com',
-      type: 'Contact type',
-      typeCompany: 'Company',
-      typeFreelance: 'Freelance / Personal project',
-      company: 'Company name',
-      companyPlaceholder: 'Your company name (optional)',
-      message: 'Tell me about your project',
-      messagePlaceholder: 'Describe your project, needs, or any questions you have...',
-      submit: 'Send message',
-      sending: 'Sending...',
-      success: 'Message sent! I will get in touch soon.',
-      error: 'There was an error. Please try again.'
-    },
-    contact: {
-      title: 'Other ways to reach me',
-      email: 'Email',
-      phone: 'Phone',
-      location: 'Location'
-    }
-  }
-};
 
 const text = content[lang];
 ---
@@ -196,24 +140,7 @@ const text = content[lang];
               />
             </div>
 
-            <!-- Budget Range (Optional) -->
-            <!-- <div id="form-budget-group" data-gsap="form-budget">
-              <label for="budget" class="block text-sm font-semibold text-gray-300 mb-2">
-                {lang === 'es' ? 'Presupuesto estimado (opcional)' : 'Estimated budget (optional)'}
-              </label>
-              <select
-                id="budget"
-                name="budget"
-                class="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-400 transition-colors"
-              >
-                <option value="">{lang === 'es' ? 'Selecciona un rango' : 'Select a range'}</option>
-                <option value="<1000">{lang === 'es' ? 'Menos de $1,000' : 'Less than $1,000'}</option>
-                <option value="1000-3000">$1,000 - $3,000</option>
-                <option value="3000-5000">$3,000 - $5,000</option>
-                <option value="5000-10000">$5,000 - $10,000</option>
-                <option value=">10000">{lang === 'es' ? 'Más de $10,000' : 'More than $10,000'}</option>
-              </select>
-            </div> -->
+          
           </div>
 
           <!-- Message -->
@@ -271,21 +198,7 @@ const text = content[lang];
               </div>
             </div>
 
-            <!-- Phone -->
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="text-sm text-gray-400 mb-1">{text.contact.phone}</p>
-                <a href="tel:+50612345678" class="text-white hover:text-pink-400 transition-colors">
-                  +506 62235826
-                </a>
-              </div>
-            </div>
-
+            
             <!-- Location -->
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -307,7 +220,7 @@ const text = content[lang];
           <h4 class="text-xl font-bold text-white mb-4">Social</h4>
           <div class="flex gap-4">
             <a 
-              href="https://github.com/tuusuario" 
+              href="https://github.com/BrayanCr72" 
               target="_blank"
               rel="noopener noreferrer"
               class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -318,7 +231,7 @@ const text = content[lang];
               </svg>
             </a>
             <a 
-              href="https://linkedin.com/in/tuusuario" 
+              href="https://www.linkedin.com/in/brayan-ordo%C3%B1ez-aguirre-585a5821a/" 
               target="_blank"
               rel="noopener noreferrer"
               class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -336,26 +249,21 @@ const text = content[lang];
 </section>
 
 <script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const submitButton = document.getElementById('submit-button') as HTMLButtonElement;
-  const statusDiv = document.getElementById('form-status') as HTMLDivElement;
-  const contactTypeSelect = document.getElementById('contact-type') as HTMLSelectElement;
-  const companyFields = document.getElementById('company-fields') as HTMLDivElement;
-  const freelanceFields = document.getElementById('freelance-fields') as HTMLDivElement;
-  const companyInput = document.getElementById('company') as HTMLInputElement;
-
-  // Manejar cambio de tipo de contacto
-  contactTypeSelect?.addEventListener('change', (e) => {
+  // Reemplaza todo el script por este:
+document.querySelectorAll('[id="contact-type"]').forEach((select) => {
+  select.addEventListener('change', (e) => {
     const value = (e.target as HTMLSelectElement).value;
     
-    // Ocultar todos los campos específicos
+    // Buscar los campos dentro del mismo formulario padre
+    const form = (e.target as HTMLElement).closest('form');
+    const companyFields = form?.querySelector('#company-fields') as HTMLDivElement;
+    const freelanceFields = form?.querySelector('#freelance-fields') as HTMLDivElement;
+    const companyInput = form?.querySelector('#company') as HTMLInputElement;
+
     companyFields?.classList.add('hidden');
     freelanceFields?.classList.add('hidden');
-    
-    // Remover required de todos los campos opcionales
     companyInput?.removeAttribute('required');
-    
-    // Mostrar campos según selección
+
     if (value === 'company') {
       companyFields?.classList.remove('hidden');
       companyInput?.setAttribute('required', 'required');
@@ -363,70 +271,73 @@ const text = content[lang];
       freelanceFields?.classList.remove('hidden');
     }
   });
+});
 
-  form?.addEventListener('submit', async (e) => {
+document.querySelectorAll('[id="contact-form"]').forEach((formEl) => {
+  const form = formEl as HTMLFormElement;
+  const submitButton = form.querySelector('#submit-button') as HTMLButtonElement;
+  const statusDiv = form.querySelector('#form-status') as HTMLDivElement;
+  const companyFields = form.querySelector('#company-fields') as HTMLDivElement;
+  const freelanceFields = form.querySelector('#freelance-fields') as HTMLDivElement;
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    // Cambiar estado del botón
+
     const originalText = submitButton.textContent;
-    const lang = document.documentElement.lang;
+    const lang = localStorage.getItem('lang') || 'en';
     submitButton.disabled = true;
     submitButton.textContent = lang === 'es' ? 'Enviando...' : 'Sending...';
-    
-    // Obtener datos del formulario
+
     const formData = new FormData(form);
     const contactType = formData.get('contact-type');
-    
+
     const data: any = {
       name: formData.get('name'),
       email: formData.get('email'),
-      contactType: contactType,
-      message: formData.get('message')
+      contactType,
+      message: formData.get('message'),
     };
 
-    // Agregar campos específicos según el tipo
     if (contactType === 'company') {
       data.company = formData.get('company');
       data.position = formData.get('position');
     } else if (contactType === 'freelance') {
       data.projectType = formData.get('project-type');
-      data.budget = formData.get('budget');
     }
 
     try {
-      // Aquí puedes integrar con un servicio como FormSpree, EmailJS, o tu propio backend
-      // Por ahora, simulamos el envío
-      console.log('Form data:', data);
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Mostrar mensaje de éxito
+      // ← Reemplazamos el simulate por el fetch real
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (!result.ok) throw new Error('Error al enviar');
+
       statusDiv.classList.remove('hidden', 'bg-red-500/20', 'text-red-400');
       statusDiv.classList.add('bg-green-500/20', 'text-green-400');
-      statusDiv.textContent = lang === 'es' 
-        ? '¡Mensaje enviado! Me pondré en contacto pronto.' 
+      statusDiv.textContent = lang === 'es'
+        ? '¡Mensaje enviado! Me pondré en contacto pronto.'
         : 'Message sent! I will get in touch soon.';
-      
-      // Limpiar formulario y ocultar campos específicos
+
       form.reset();
       companyFields?.classList.add('hidden');
       freelanceFields?.classList.add('hidden');
-      
-      // Ocultar mensaje después de 5 segundos
-      setTimeout(() => {
-        statusDiv.classList.add('hidden');
-      }, 5000);
-      
+
+      setTimeout(() => statusDiv.classList.add('hidden'), 5000);
+
     } catch (error) {
-      // Mostrar mensaje de error
       statusDiv.classList.remove('hidden', 'bg-green-500/20', 'text-green-400');
       statusDiv.classList.add('bg-red-500/20', 'text-red-400');
       statusDiv.textContent = lang === 'es'
         ? 'Hubo un error. Por favor intenta de nuevo.'
         : 'There was an error. Please try again.';
     } finally {
-      // Restaurar botón
       submitButton.disabled = false;
       submitButton.textContent = originalText;
     }
   });
+});
 </script>
