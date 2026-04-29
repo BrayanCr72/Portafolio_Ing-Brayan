@@ -6,6 +6,7 @@ import Technologies from '../components/Technologies.astro';
 import Experience from '../components/experience.astro';
 import Contact from '../components/contact.astro';
 import '../styles/global.css';
+
 ---
 
 <Layout title="Ing Brayan O - Portafolio">
@@ -81,8 +82,9 @@ import '../styles/global.css';
 
 <script>
   import { runLoadingSequence } from '../animations/loadingAnimation';
-  import { animateHero, setHeroInitialState } from '../animations/heroAnimation';
-  import { initHeroToAboutTransition, initAboutContentAnimations } from '../animations/transitionAnimation';
+  import { initAllAnimations } from '../animations/orchestrator';
+  import { initLenis } from '../lib/lenis';
+  
 
   // ── Idioma ─────────────────────────────────────────────────
   function getLang(): string {
@@ -95,50 +97,42 @@ import '../styles/global.css';
     return localStorage.getItem('lang') || 'es';
   }
 
-  function applyLang(lang: string) {
-    const es = document.getElementById('content-es');
-    const en = document.getElementById('content-en');
-    if (lang === 'es') {
-      es!.style.display = 'block';
-      en!.style.display = 'none';
-    } else {
-      en!.style.display = 'block';
-      es!.style.display = 'none';
-    }
-    const langBtn = document.getElementById('lang-button');
-    if (langBtn) {
-      langBtn.querySelector('span')!.textContent = lang.toUpperCase();
-    }
+function applyLang(lang: string) {
+  const es = document.getElementById('content-es');
+  const en = document.getElementById('content-en');
+  if (lang === 'es') {
+    es!.style.display = 'block';
+    en!.style.display = 'none';
+  } else {
+    en!.style.display = 'block';
+    es!.style.display = 'none';
+  }
+  const langBtn = document.getElementById('lang-button');
+  if (langBtn) {
+    langBtn.querySelector('span')!.textContent = lang.toUpperCase();
+  }
+}
+
+  // ── Boot sequence ──────────────────────────────────────────
+  function startApp() {
+    // 1. Lenis primero — debe estar listo antes que ScrollTrigger
+    initLenis();
+    // 2. Animaciones
+    initAllAnimations();
   }
 
-  // ── Animaciones del hero ───────────────────────────────────
-  function startAnimations() {
-    setHeroInitialState();
-    animateHero();
-    setTimeout(() => {
-      initHeroToAboutTransition();
-      initAboutContentAnimations();
-    }, 500);
-  }
-
-  // ── Init ───────────────────────────────────────────────────
   const lang = getLang();
-
-  // 1. Aplicar idioma antes de nada
   applyLang(lang);
 
-  // 2. Esperar a que el navegador pinte el DOM
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       if (sessionStorage.getItem('loaded')) {
-        // Ya pasó por el loading — ocultar y arrancar directo
         const screen = document.getElementById('loading-screen');
         if (screen) screen.style.display = 'none';
-        startAnimations();
+        startApp();
       } else {
-        // Primera visita — mostrar loading
         sessionStorage.setItem('loaded', 'true');
-        runLoadingSequence(() => startAnimations());
+        runLoadingSequence(() => startApp());
       }
     });
   });

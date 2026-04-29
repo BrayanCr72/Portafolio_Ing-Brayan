@@ -94,7 +94,7 @@ const text = content[lang];
           </div>
 
           <!-- Company Fields (shown when "company" is selected) -->
-          <div id="company-fields" class="hidden space-y-6">
+        <div id="company-fields" class="hidden space-y-6 overflow-hidden">
             <!-- Company Name -->
             <div id="form-company-group" data-gsap="form-company">
               <label for="company" class="block text-sm font-semibold text-gray-300 mb-2">
@@ -125,7 +125,7 @@ const text = content[lang];
           </div>
 
           <!-- Freelance Fields (shown when "freelance" is selected) -->
-          <div id="freelance-fields" class="hidden space-y-6">
+       <div id="freelance-fields" class="hidden space-y-6 overflow-hidden">
             <!-- Project Type -->
             <div id="form-project-type-group" data-gsap="form-project-type">
               <label for="project-type" class="block text-sm font-semibold text-gray-300 mb-2">
@@ -250,28 +250,7 @@ const text = content[lang];
 
 <script>
   // Reemplaza todo el script por este:
-document.querySelectorAll('[id="contact-type"]').forEach((select) => {
-  select.addEventListener('change', (e) => {
-    const value = (e.target as HTMLSelectElement).value;
-    
-    // Buscar los campos dentro del mismo formulario padre
-    const form = (e.target as HTMLElement).closest('form');
-    const companyFields = form?.querySelector('#company-fields') as HTMLDivElement;
-    const freelanceFields = form?.querySelector('#freelance-fields') as HTMLDivElement;
-    const companyInput = form?.querySelector('#company') as HTMLInputElement;
 
-    companyFields?.classList.add('hidden');
-    freelanceFields?.classList.add('hidden');
-    companyInput?.removeAttribute('required');
-
-    if (value === 'company') {
-      companyFields?.classList.remove('hidden');
-      companyInput?.setAttribute('required', 'required');
-    } else if (value === 'freelance') {
-      freelanceFields?.classList.remove('hidden');
-    }
-  });
-});
 
 document.querySelectorAll('[id="contact-form"]').forEach((formEl) => {
   const form = formEl as HTMLFormElement;

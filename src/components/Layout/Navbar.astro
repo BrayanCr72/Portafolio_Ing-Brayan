@@ -8,63 +8,112 @@ const itemsEn = navItems["en"];
 <nav
   id="navbar"
   data-gsap="navbar-container"
-  class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-white/10"
+  class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-white/10 will-change-transform"
 >
   <div class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo/Brand -->
-      <a href="#hero" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 hover:scale-105 transition-transform">
+      <a
+        href="#hero"
+        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 hover:scale-105 transition-transform"
+      >
         Ing.Brayan Ordoñez
       </a>
 
       <!-- Desktop Navigation ES -->
       <ul id="nav-menu-es" class="hidden items-center space-x-8 nav-lang-menu">
-        {itemsEs.map((item) => (
-          <li>
-            <a href={item.href} class="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-              {item.name}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300" />
-            </a>
-          </li>
-        ))}
+        {
+          itemsEs.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-gray-300 hover:text-white transition-colors duration-300 relative group"
+              >
+                {item.name}
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300" />
+              </a>
+            </li>
+          ))
+        }
       </ul>
 
       <!-- Desktop Navigation EN -->
       <ul id="nav-menu-en" class="hidden items-center space-x-8 nav-lang-menu">
-        {itemsEn.map((item) => (
-          <li>
-            <a href={item.href} class="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-              {item.name}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300" />
-            </a>
-          </li>
-        ))}
+        {
+          itemsEn.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-gray-300 hover:text-white transition-colors duration-300 relative group"
+              >
+                {item.name}
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300" />
+              </a>
+            </li>
+          ))
+        }
       </ul>
 
       <!-- Language Selector & Mobile Menu Button -->
       <div class="flex items-center gap-4">
         <div id="lang-selector" class="relative">
-          <button id="lang-button" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-white">
+          <button
+            id="lang-button"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-white"
+          >
             <span id="lang-label" class="font-medium">EN</span>
           </button>
 
-          <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-slate-800 rounded-lg shadow-xl border border-white/10 overflow-hidden z-50">
-            <button onclick="setLang('es')" class="w-full text-left px-4 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+          <div
+            id="lang-dropdown"
+            class="hidden absolute right-0 mt-2 w-32 bg-slate-800 rounded-lg shadow-xl border border-white/10 overflow-hidden z-50"
+          >
+            <button
+              onclick="setLang('es')"
+              class="w-full text-left px-4 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
+            >
               Español
             </button>
-            <button onclick="setLang('en')" class="w-full text-left px-4 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+            <button
+              onclick="setLang('en')"
+              class="w-full text-left px-4 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
+            >
               English
             </button>
           </div>
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Toggle menu">
-          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg
+            id="menu-icon"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <svg
+            id="close-icon"
+            class="w-6 h-6 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
@@ -73,26 +122,36 @@ const itemsEn = navItems["en"];
     <!-- Mobile Navigation ES -->
     <div id="mobile-menu-es" class="hidden mt-4 pb-4 mobile-lang-menu">
       <ul class="space-y-3">
-        {itemsEs.map((item) => (
-          <li>
-            <a href={item.href} class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300">
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {
+          itemsEs.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
 
     <!-- Mobile Navigation EN -->
     <div id="mobile-menu-en" class="hidden mt-4 pb-4 mobile-lang-menu">
       <ul class="space-y-3">
-        {itemsEn.map((item) => (
-          <li>
-            <a href={item.href} class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300">
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {
+          itemsEn.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
@@ -102,24 +161,24 @@ const itemsEn = navItems["en"];
   // ── Idioma ──────────────────────────────────────────────
   function getCurrentLang(): string {
     const params = new URLSearchParams(window.location.search);
-    const urlLang = params.get('lang');
-    if (urlLang === 'es' || urlLang === 'en') {
-      localStorage.setItem('lang', urlLang);
+    const urlLang = params.get("lang");
+    if (urlLang === "es" || urlLang === "en") {
+      localStorage.setItem("lang", urlLang);
       return urlLang;
     }
-    return localStorage.getItem('lang') || 'en';
+    return localStorage.getItem("lang") || "en";
   }
 
   function applyNavLang(lang: string) {
     // Menus desktop
-    const menuEs = document.getElementById('nav-menu-es');
-    const menuEn = document.getElementById('nav-menu-en');
+    const menuEs = document.getElementById("nav-menu-es");
+    const menuEn = document.getElementById("nav-menu-en");
     if (menuEs && menuEn) {
-      menuEs.style.display = lang === 'es' ? 'flex' : 'none';
-      menuEn.style.display = lang === 'en' ? 'flex' : 'none';
+      menuEs.style.display = lang === "es" ? "flex" : "none";
+      menuEn.style.display = lang === "en" ? "flex" : "none";
     }
     // Label del botón
-    const label = document.getElementById('lang-label');
+    const label = document.getElementById("lang-label");
     if (label) label.textContent = lang.toUpperCase();
   }
 
@@ -127,73 +186,88 @@ const itemsEn = navItems["en"];
   applyNavLang(getCurrentLang());
 
   // Función global llamada desde index.astro y footer
-  (window as any).setLang = function(lang: string) {
-    localStorage.setItem('lang', lang);
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.pushState({}, '', url);
+(window as any).setLang = function(lang: string) {
+  localStorage.setItem('lang', lang);
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', lang);
+  window.history.pushState({}, '', url);
 
-    // Contenido principal
-    const es = document.getElementById('content-es');
-    const en = document.getElementById('content-en');
-    if (es && en) {
-      es.style.display = lang === 'es' ? 'block' : 'none';
-      en.style.display = lang === 'en' ? 'block' : 'none';
-    }
+  const es = document.getElementById('content-es');
+  const en = document.getElementById('content-en');
+  if (es && en) {
+    es.style.display = lang === 'es' ? 'block' : 'none';
+    en.style.display = lang === 'en' ? 'block' : 'none';
+  }
 
-    // Navbar
-    applyNavLang(lang);
+  applyNavLang(lang);
 
-    // Footer
-    const footerEs = document.getElementById('footer-es');
-    const footerEn = document.getElementById('footer-en');
-    if (footerEs && footerEn) {
-      footerEs.style.display = lang === 'es' ? 'block' : 'none';
-      footerEn.style.display = lang === 'en' ? 'block' : 'none';
-    }
+  const footerEs = document.getElementById('footer-es');
+  const footerEn = document.getElementById('footer-en');
+  if (footerEs && footerEn) {
+    footerEs.style.display = lang === 'es' ? 'block' : 'none';
+    footerEn.style.display = lang === 'en' ? 'block' : 'none';
+  }
 
-    document.getElementById('lang-dropdown')?.classList.add('hidden');
-  };
+  document.getElementById('lang-dropdown')?.classList.add('hidden');
+
+  // 🔁 Reiniciar animaciones para el nuevo árbol DOM activo
+  import('../../animations/orchestrator').then(({ reinitOnLangChange }) => {
+    reinitOnLangChange();
+  });
+};
 
   // ── Dropdown ────────────────────────────────────────────
-  document.getElementById('lang-button')?.addEventListener('click', () => {
-    document.getElementById('lang-dropdown')?.classList.toggle('hidden');
+  document.getElementById("lang-button")?.addEventListener("click", () => {
+    document.getElementById("lang-dropdown")?.classList.toggle("hidden");
   });
-  document.addEventListener('click', (e) => {
-    if (!(e.target as HTMLElement).closest('#lang-selector')) {
-      document.getElementById('lang-dropdown')?.classList.add('hidden');
+  document.addEventListener("click", (e) => {
+    if (!(e.target as HTMLElement).closest("#lang-selector")) {
+      document.getElementById("lang-dropdown")?.classList.add("hidden");
     }
   });
 
   // ── Mobile menu ─────────────────────────────────────────
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const menuIcon = document.getElementById('menu-icon');
-  const closeIcon = document.getElementById('close-icon');
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
 
-  mobileMenuButton?.addEventListener('click', () => {
+  mobileMenuButton?.addEventListener("click", () => {
     const lang = getCurrentLang();
     const mobileMenu = document.getElementById(`mobile-menu-${lang}`);
-    const isHidden = mobileMenu?.classList.contains('hidden');
+    const isHidden = mobileMenu?.classList.contains("hidden");
     // Ocultar ambos primero
-    document.querySelectorAll('.mobile-lang-menu').forEach(m => m.classList.add('hidden'));
+    document
+      .querySelectorAll(".mobile-lang-menu")
+      .forEach((m) => m.classList.add("hidden"));
     if (isHidden) {
-      mobileMenu?.classList.remove('hidden');
-      menuIcon?.classList.add('hidden');
-      closeIcon?.classList.remove('hidden');
+      mobileMenu?.classList.remove("hidden");
+      menuIcon?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
     } else {
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
     }
   });
 
   // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e: Event) {
-      e.preventDefault();
-      const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
-      if (href) {
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  // Smooth scroll con Lenis
+  import("../../lib/lenis").then(({ scrollToTarget }) => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e: Event) {
+        e.preventDefault();
+        const href = (e.currentTarget as HTMLAnchorElement).getAttribute(
+          "href",
+        );
+        if (href && href.length > 1) {
+          scrollToTarget(href, -80);
+          // cerrar menú mobile
+          document
+            .querySelectorAll(".mobile-lang-menu")
+            .forEach((m) => m.classList.add("hidden"));
+          document.getElementById("menu-icon")?.classList.remove("hidden");
+          document.getElementById("close-icon")?.classList.add("hidden");
+        }
+      });
     });
   });
 </script>
